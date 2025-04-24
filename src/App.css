@@ -1,0 +1,132 @@
+.App-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00286e;
+}
+
+.App-logo {
+  height: 120px;
+  padding: 10px;
+}
+
+.App-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: "white";
+}
+
+.App-nav li {
+  position: relative;
+}
+
+.App-nav a {
+  text-decoration: none;
+  padding: 50px;
+  display: block;
+  
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown li {
+  width: 200px;
+}
+
+.dropdown a {
+  padding: 10px;
+  display: block;
+  color: #000;
+}
+
+.App-nav li:hover .dropdown {
+  display: block;
+}
+
+.dropdown_title {
+  -webkit-box-align: stretch;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Avenir Next W01",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  align-items: stretch;
+}
+
+.donate-button {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Avenir Next W01",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+}
+
+.center-donate {
+  display: flex;
+  justify-content: center;
+}
+.image-scroller {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px;
+}
+
+.image-scroller img {
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.App {
+  font-family: sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.images-container {
+  display: flex;
+  max-width: 500px;
+  overflow: scroll;
+  /* Add the following lines for smooth scrolling */
+  scroll-behavior: smooth;
+  transition: scroll 0.3s ease-in-out;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.nav-btn {
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  background-color: #c3c3c3;
+  border-radius: 6px;
+  height: 200px;
+  width: 30px;
+  margin: 5px;
+}
