@@ -4,16 +4,11 @@ import AppRouter from './Pages/Router';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Footer from './Pages/Footer';
 
 const pages = ['Home' , 'Get Involved', 'Our Work', 'About'];
@@ -63,10 +58,10 @@ function ResponsiveAppBar() {
           }}
         >
           <img
-            src="/logo192.png"
+            src="/images/logo.svg"
             style={{ height: '75px', width: 'auto', padding: '10px' }}
           />
-          Organization
+          Logo
         </Typography>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, marginLeft: '50px',  alignItems: 'center', justifyContent: 'center',}}>
@@ -85,15 +80,12 @@ function ResponsiveAppBar() {
                 {page}
               </Button>
             ))}
-
-            
-
           <Box sx={{ flexGrow: 0 }}>
             <Button onClick={handleOpenUserMenu}
               sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold', fontFamily: 'arial', fontSize: '16px',
                 '&:hover': {
-                  backgroundColor: '#f0f0f0', // Light gray background on hover
-                  color: '#000', // Black text color on hover
+                  backgroundColor: '#f0f0f0',
+                  color: '#000',
                 },
               }}
             >
@@ -117,14 +109,19 @@ function ResponsiveAppBar() {
             >
               {resources.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                  <Typography sx={{ textAlign: 'center' }}>
+                    <a href={setting} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {setting}
+                    </a>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-            
+
+              {/* The donation button that links to any external site */}            
             <Button 
-              sx={{ my: 2, color: 'white', display: 'block', fontWeight: 'bold', fontFamily: 'arial', fontSize: '16px', borderRadius: '25px', border: '2px solid black', backgroundColor: "red", marginLeft: '20px', '&:hover': {
+              sx={{ my: 2, color: 'white', display: 'block', fontWeight: 'bold', fontFamily: 'arial', fontSize: '16px', borderRadius: '25px', border: '2px solid black', backgroundColor: "blue", marginLeft: '20px', '&:hover': {
                   backgroundColor: '#f0f0f0', // Light gray background on hover
                   color: '#000', // Black text color on hover
                 }, 

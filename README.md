@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Welcome to my website template!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was create by me (Levi Newman) in effort to help people create simple websites use Javascript, React, and Node.
+This website is currently a static website which means there is no database or anything automatically updating the information on the website.
 
-## Available Scripts
+## Setting up the website for development
 
-In the project directory, you can run:
+This will cover how to set up this website for development on a Linux system running Ubuntu 24.04.1 LTS
+If you don't have access to a linux computer I recommend using WSL (Windows Subsystem Linux) which will create a simple virtual machine on any Windows machine.
 
-### `npm start`
+Here is a good tutorial
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    https://www.howtogeek.com/744328/how-to-install-the-windows-subsystem-for-linux-on-windows-11/ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once that is complete here are the commands to install the needed software to run the development enviroment on Ubuntu 24.04.1
 
-### `npm test`
+    sudo apt-get update
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    sudo apt install nodejs npm curl git
 
-### `npm run build`
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    sudo reboot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    nvm install node
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Now that got all of the software we can clone the github repository with this command
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    git clone git@github.com:levinewman39/Website-Template.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once that is complete we can start up the server! We can run these commands to setup and start the server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This next command will show many warnings, we can ignore all of these
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    npm install
 
-## Learn More
+Once that is complete we can start the server!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Website Code Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This covers the break down of all of the different **javascript** files that load all of the different pages and there elements.
+First I will cover how the directory is laid out!
 
-### Analyzing the Bundle Size
+- **node_modules/**: This folder contains all the dependencies installed via npm.
+- **public/**: This folder holds all the public facing data, pictures and other assets should be stored here. 
+- **src/**: This is where the main application code resides, including React components, styles, and utilities.
+- **.gitignore**: This file lists files and directories that should not be tracked by Git.
+- **package-lock.json**: This file ensures consistent dependency versions across environments.
+- **package.json**: This file defines the project, its dependencies, and scripts.
+- **README.md**: This file provides documentation and instructions for the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Now I will cover what is in the **src/** folder. This is where all of javascript files are located!
 
-### Making a Progressive Web App
+- **Pages/** This folder contains all of the different pages that are loaded onto the website. It also contains the routing file and the footer file.
+- **App.jsx** This is the main App file! This is where everything is complied and where the top app bar code is located. This file is where you add the top bar, the page that is getting loaded by the user and the footer. It is also where the page routing is complied. At the moment the entire app runs through this file!
+- **index.css** This defines global styles that be used through out the application.
+- **index.js** This is the main JavaScript entry point for the React application. It renders the `App` component into the DOM and initializes the React app.
+- **reportWebVitals.js** This file is used to measure and report performance metrics of the application. It can be used to track metrics like page load times and user interactions. (Not setup yet)
+- **setupTests.js**: This file is used to configure and set up testing utilities for the application. It is typically used with Jest and React Testing Library to write and run unit tests. (Not setup yet)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The last folder that I will go over is the pages folder.
 
-### Advanced Configuration
+- **About.jsx** This is where the About page code is. This breaks down the structure of the org and how it works
+- **Bulletin.jsx** This page is where other orgs can post notices and any other upcoming events can be posted.
+- **Community_Links.jsx** The drop down menu pages for resources are loaded here.
+- **Footer.jsx** This is where the Footer function code is. 
+- **Get_Involved.jsx** This is where a user can get information on how to join the org. 
+- **Home.jsx** This is where the Home page code is located. This is also the first page that is loaded when someone visits the website.
+- **Our_Work.jsx** Here is the page that shows the organization recent work.
+- **Router.jsx** This is where all of the router logic is. This is where the the javascript code gets attached to the websites links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The javascript files are where the logic and styling for each page is done. Currently they are using HTML and CSS for styling.
+Each of the files will also have some comments to explain the key elements of the file.
 
-### Deployment
+## Future planned updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- SQL support for easier updating and maintaining the website. 
+- Admin page to see site traffic
+- Documented Cloudflare setup
+- Live site demo
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
