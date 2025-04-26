@@ -1,6 +1,6 @@
 # Welcome to my website template!
 
-This project was create by me (Levi Newman) in effort to help people create simple websites use Javascript, React, and Node.
+This project was created by me (Levi Newman) in an effort to help people create simple websites using JavaScript, React, and Node.
 This website is currently a static website, which means there is no database or anything automatically updating the information on the website.
 
 ## Setting up the website for development
@@ -59,8 +59,8 @@ Now I will cover what is in the **src/** folder. This is where all of the JavaSc
 - **App.jsx** This is the main App file! This is where everything is compiled and where the top app bar code is located. This file is where you add the top bar, the page that is getting loaded by the user and the footer. It is also where the page routing is compiled. At the moment, the entire app runs through this file!
 - **index.css** This defines global styles that are used throughout the application.
 - **index.js** This is the main JavaScript entry point for the React application. It renders the `App` component into the DOM and initializes the React app.
-- **reportWebVitals.js** This file is used to measure and report performance metrics of the application. It can be used to track metrics like page load times and user interactions. (Not setup yet)
-- **setupTests.js**: This file is used to configure and set up testing utilities for the application. It is typically used with Jest and React Testing Library to write and run unit tests. (Not setup yet)
+- **reportWebVitals.js** This file is used to measure and report performance metrics of the application. It can be used to track metrics like page load times and user interactions. (Not set up yet)
+- **setupTests.js**: This file is used to configure and set up testing utilities for the application. It is typically used with Jest and React Testing Library to write and run unit tests. (Not set up yet)
 
 The last folder that I will go over is the pages folder.
 
@@ -82,5 +82,6 @@ Each of the files will also have some comments to explain the key elements of th
 - Admin page to see site traffic
 - Documented Cloudflare setup
 - Live site demo
+
 
 
